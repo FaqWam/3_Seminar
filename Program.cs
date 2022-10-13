@@ -1,17 +1,19 @@
-﻿Console.Write("Введите целое число: ");
+﻿Console.Write("Введите число: ");
 string number = Console.ReadLine();
-int length = number.Length;
-string txtToCheck = number.Replace(" "," ");  
+int lenght = number.Length;
 
-bool IsPalindrome()
+if (lenght == 5)
 {
-    for (int i = 0; i < length / 2; i++)
-        while (number[i] == number[length - 1])
-        {
-            return true;
-        }
-    return false;
+    if (number[0] == number[4] && number[1] == number[3])
+    {
+        Console.Write("Палиндром");
+    }
+    else
+    {
+        Console.Write("Не палиндром");
+    }
 }
-
-if (IsPalindrome()) System.Console.WriteLine("Палиндром");
-else Console.Write("Не палиндром");
+else
+{
+    Console.Write("Введте пятизначное число");
+}
